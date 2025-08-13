@@ -46,3 +46,6 @@
 [submodule "crux-projects/crux-runtime-data"]
 	path = crux-projects/crux-runtime-data
 	url = ./crux-projects/crux-runtime-data
+[submodule "crux-projects/crux-creations"]
+	path = crux-projects/crux-creations
+	url = ./crux-projects/crux-creations
