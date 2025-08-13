@@ -1,0 +1,410 @@
+# Rust
+**/*.rs.bk
+Cargo.lock
+/target/
+**/target/
+**/Cargo.lock
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+*.sled
+**/*.sled
+**/*.sled/blobs/
+
+# OS generated files
+.DS_Store
+.DS_Store?._
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Editor directories and files
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Logs
+*.log
+logs/
+**/logs/
+
+# Temporary files
+tmp/
+temp/
+**/tmp/
+**/temp/
+
+# Cache directories
+.cache/
+**/.cache/
+.crux_cache/
+**/.crux_cache/
+
+# Backup directories
+.crux_backups/
+**/.crux_backups/
+
+# AI/LLM specific
+.gemini/
+**/.gemini/
+.claude/
+**/.claude/
+.serena/
+**/.serena/
+
+# Development outputs
+outputs/
+**/outputs/
+artifacts/
+**/artifacts/
+
+# Test outputs
+test_output/
+**/test_output/
+shorts_test_output/
+**/shorts_test_output/
+
+# Memory storage
+memory_storage/
+**/memory_storage/
+
+# Mind registry
+mind_registry_db/
+**/mind_registry_db/
+
+# Generated content
+generated/
+**/generated/
+
+# Checkpoints
+checkpoints/
+**/checkpoints/
+
+# Book corpus data
+bookcorpus_data/
+**/bookcorpus_data/
+
+# Model files
+*.pth
+*.pt
+*.h5
+*.hdf5
+*.pkl
+*.pickle
+**/*.pth
+**/*.pt
+**/*.h5
+**/*.hdf5
+**/*.pkl
+**/*.pickle
+llm-models/
+**/llm-models/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Coverage reports
+coverage/
+**/coverage/
+*.lcov
+
+# Dependency directories
+jspm_packages/
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity
+
+# dotenv environment variables file
+.env.test
+
+# parcel-bundler cache (https://parceljs.org/)
+.cache
+.parcel-cache
+
+# next.js build output
+.next
+
+# nuxt.js build output
+.nuxt
+
+# vuepress build output
+.vuepress/dist
+
+# Serverless directories
+.serverless
+
+# FuseBox cache
+.fusebox/
+
+# DynamoDB Local files
+.dynamodb/
+
+# TernJS port file
+.tern-port
+
+# Stores VSCode versions used for testing VSCode extensions
+.vscode-test
+
+# yarn v2
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
+
+# Rust specific
+**/*.rlib
+**/*.rmeta
+
+# Claude specific
+.claude/
+**/.claude/
+.serena/
+**/.serena/
+
+# Claude configuration
+claude_desktop_config.json
+
+# Claude cache
+.claude_cache/
+
+# Claude logs
+claude_logs/
+
+# Claude temp files
+claude_temp/
+
+# Claude backup files
+claude_backups/
+
+# Claude data
+claude_data/
+
+# Claude sessions
+claude_sessions/
+
+# Claude models
+claude_models/
+
+# Claude downloads
+claude_downloads/
+
+# Gradle (for Java projects)
+.gradle/
+**/.gradle/
+build/
+**/build/
+!**/src/main/resources/**
+
+# Compiled Java classes
+*.class
+**/*.class
+
+# Minecraft specific
+crunsj/
+**/crunsj/
+logs/
+**/logs/
+
+# Additional research project files
+data/
+**/data/
+unsloth_compiled_cache/
+**/unsloth_compiled_cache/
+tantivy_index/
+**/tantivy_index/
+
+# Development directories
+active_development/
+**/active_development/
+
+# Archive directories
+archive/
+**/archive/
+
+# Binaries
+bin/
+**/bin/
+
+# Config files (keep example configs)
+config/
+**/config/
+!**/config/*.example
+
+# Documentation
+docs/
+**/docs/
+
+# Examples
+examples/
+**/examples/
+
+# Notebooks
+notebooks/
+**/notebooks/
+
+# Pipelines
+pipelines/
+**/pipelines/
+
+# Prompts
+prompts/
+**/prompts/
+
+# Reports
+reports/
+**/reports/
+
+# Scripts
+scripts/
+**/scripts/
+
+# Security tools
+security-tools/
+**/security-tools/
+
+# Source directories
+src/
+**/src/
+
+# Thinker
+thinker/
+**/thinker/
+
+# Training setup
+training_setup/
+**/training_setup/
+
+# YouTube related
+youtube_agent/
+**/youtube_agent/
+youtube-script-writer/
+**/youtube-script-writer/
+
+# AI MC
+ai_mc/
+**/ai_mc/
+
+# AI Video Content
+ai_video_content/
+**/ai_video_content/
+
+# Open source projects
+open-source/
+**/open-source/
+
+# Simple Crux Assistant
+simple-crux-assistant/
+**/simple-crux-assistant/
+
+# Python bindings
+python_bindings/
+**/python_bindings/
+
+# Python coder agent
+python_coder_agent/
+**/python_coder_agent/
+
+# Python research agent
+python_research_agent/
+**/python_research_agent/
+
+# Minds
+minds/
+**/minds/
+
+# Models
+models/
+**/models/
+
+# MCP servers
+mcp_servers/
+**/mcp_servers/
+
+# MCP client
+mcp-client/
+**/mcp-client/
+
+# MCP client Rust
+mcp-client-rs/
+**/mcp-client-rs/
+
+# Crux bad (deprecated/old projects)
+crux_bad/
+**/crux_bad/
+
+# Crux expert merged
+crux_expert_merged/
+**/crux_expert_merged/
+
+# Crux unsloth merged
+crux_unsloth_merged/
+**/crux_unsloth_merged/
+
+# Crystalline knowledge
+crystalline_knowledge/
+**/crystalline_knowledge/
+
+# Gradle wrapper
+gradle-8.5/
+**/gradle-8.5/
+*.safetensors
+*.JPEG
+*.python_bindings
+*.lock
+crux-projects/crux-imagen/datasets/*

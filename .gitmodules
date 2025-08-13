@@ -1,0 +1,48 @@
+[submodule "crux-projects/crux-apis"]
+	path = crux-projects/crux-apis
+	url = ./crux-projects/crux-apis
+[submodule "crux-projects/crux-assistant"]
+	path = crux-projects/crux-assistant
+	url = ./crux-projects/crux-assistant
+[submodule "crux-projects/crux-code-model"]
+	path = crux-projects/crux-code-model
+	url = ./crux-projects/crux-code-model
+[submodule "crux-projects/crux-common-payloads"]
+	path = crux-projects/crux-common-payloads
+	url = ./crux-projects/crux-common-payloads
+[submodule "crux-projects/crux-core"]
+	path = crux-projects/crux-core
+	url = ./crux-projects/crux-core
+[submodule "crux-projects/crux-diffusion"]
+	path = crux-projects/crux-diffusion
+	url = ./crux-projects/crux-diffusion
+[submodule "crux-projects/crux-events"]
+	path = crux-projects/crux-events
+	url = ./crux-projects/crux-events
+[submodule "crux-projects/crux-gpu-compute"]
+	path = crux-projects/crux-gpu-compute
+	url = ./crux-projects/crux-gpu-compute
+[submodule "crux-projects/crux-imagen"]
+	path = crux-projects/crux-imagen
+	url = ./crux-projects/crux-imagen
+[submodule "crux-projects/crux-knowledge-types"]
+	path = crux-projects/crux-knowledge-types
+	url = ./crux-projects/crux-knowledge-types
+[submodule "crux-projects/crux-macros"]
+	path = crux-projects/crux-macros
+	url = ./crux-projects/crux-macros
+[submodule "crux-projects/crux-manifold-engine"]
+	path = crux-projects/crux-manifold-engine
+	url = ./crux-projects/crux-manifold-engine
+[submodule "crux-projects/crux-mind-macros"]
+	path = crux-projects/crux-mind-macros
+	url = ./crux-projects/crux-mind-macros
+[submodule "crux-projects/crux-mindwiki"]
+	path = crux-projects/crux-mindwiki
+	url = ./crux-projects/crux-mindwiki
+[submodule "crux-projects/crux-runtime"]
+	path = crux-projects/crux-runtime
+	url = ./crux-projects/crux-runtime
+[submodule "crux-projects/crux-runtime-data"]
+	path = crux-projects/crux-runtime-data
+	url = ./crux-projects/crux-runtime-data
