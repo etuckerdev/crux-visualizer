@@ -1,0 +1,374 @@
+{
+  "basic_results": {
+    "config": {
+      "iterations_per_query": 10,
+      "warmup_iterations": 3,
+      "timeout_ms": 30000,
+      "enable_detailed_metrics": true,
+      "quality_scoring_weights": {
+        "accuracy_weight": 0.4,
+        "relevance_weight": 0.3,
+        "completeness_weight": 0.2,
+        "coherence_weight": 0.1
+      }
+    },
+    "total_queries": 10,
+    "total_runs": 200,
+    "manifold_performance": {
+      "strategy": "ManifoldRouting",
+      "avg_execution_time_ms": 0.22616076,
+      "avg_quality_score": 0.6033543944358826,
+      "success_rate": 1.0,
+      "overhead_metrics": {
+        "avg_pathfinding_time_ms": 0.06571640999999998,
+        "avg_graph_operations": 100.0,
+        "avg_similarity_calculations": 0.0,
+        "avg_memory_usage_mb": 0.0
+      },
+      "percentiles": {
+        "p50_execution_time_ms": 0.051106,
+        "p90_execution_time_ms": 0.661543,
+        "p95_execution_time_ms": 0.7247085499999999,
+        "p99_execution_time_ms": 0.7637161200000006
+      }
+    },
+    "direct_performance": {
+      "strategy": "DirectRouting",
+      "avg_execution_time_ms": 0.000053100000000000024,
+      "avg_quality_score": 0.4857599824666977,
+      "success_rate": 1.0,
+      "overhead_metrics": {
+        "avg_pathfinding_time_ms": 0.0,
+        "avg_graph_operations": 100.0,
+        "avg_similarity_calculations": 0.0,
+        "avg_memory_usage_mb": 0.0
+      },
+      "percentiles": {
+        "p50_execution_time_ms": 0.00005,
+        "p90_execution_time_ms": 0.00007,
+        "p95_execution_time_ms": 0.00008049999999999998,
+        "p99_execution_time_ms": 0.00011
+      }
+    },
+    "comparative_analysis": {
+      "time_improvement_ratio": -4258.148022598868,
+      "quality_improvement_ratio": 0.24208336671135067,
+      "overhead_cost_ratio": 1237.597175141242,
+      "statistical_significance": {
+        "time_p_value": 0.05,
+        "quality_p_value": 0.05,
+        "sample_size": 200,
+        "confidence_level": 0.95
+      },
+      "recommendations": [
+        "Manifold routing shows significant quality improvements",
+        "Manifold routing has notable latency overhead - consider optimization",
+        "High pathfinding overhead - investigate algorithm efficiency"
+      ]
+    },
+    "query_type_breakdown": {
+      "Creative": {
+        "query_type": "Creative",
+        "manifold_avg_time": 0.16844905,
+        "direct_avg_time": 0.00005,
+        "manifold_avg_quality": 0.6092239916324615,
+        "direct_avg_quality": 0.4786759912967682,
+        "performance_ratio": 3368.9809999999998,
+        "quality_ratio": 1.2727272783872643
+      },
+      "Factual": {
+        "query_type": "Factual",
+        "manifold_avg_time": 0.037147799999999995,
+        "direct_avg_time": 0.000058,
+        "manifold_avg_quality": 0.5454680323600769,
+        "direct_avg_quality": 0.6942319869995117,
+        "performance_ratio": 640.4793103448275,
+        "quality_ratio": 0.7857143470406824
+      },
+      "Complex": {
+        "query_type": "Complex",
+        "manifold_avg_time": 0.36454869999999995,
+        "direct_avg_time": 0.0000505,
+        "manifold_avg_quality": 0.6223800182342529,
+        "direct_avg_quality": 0.37342798709869385,
+        "performance_ratio": 7218.78613861386,
+        "quality_ratio": 1.6666667730765534
+      },
+      "Associative": {
+        "query_type": "Associative",
+        "manifold_avg_time": 0.04156470000000001,
+        "direct_avg_time": 0.00005350000000000001,
+        "manifold_avg_quality": 0.6679199635982513,
+        "direct_avg_quality": 0.445279985666275,
+        "performance_ratio": 776.9102803738318,
+        "quality_ratio": 1.4999999665352999
+      },
+      "Analytical": {
+        "query_type": "Analytical",
+        "manifold_avg_time": 0.5130634000000001,
+        "direct_avg_time": 0.000052499999999999995,
+        "manifold_avg_quality": 0.5591299831867218,
+        "direct_avg_quality": 0.4989159554243088,
+        "performance_ratio": 9772.636190476192,
+        "quality_ratio": 1.1206897216009124
+      },
+      "Sequential": {
+        "query_type": "Sequential",
+        "manifold_avg_time": 0.0492081,
+        "direct_avg_time": 0.000059999999999999995,
+        "manifold_avg_quality": 0.5707679986953735,
+        "direct_avg_quality": 0.5707679986953735,
+        "performance_ratio": 820.135,
+        "quality_ratio": 1.0
+      }
+    },
+    "generated_at": "2025-08-22T23:51:59.288170882Z"
+  },
+  "traditional_algorithm_results": {
+    "total_queries": 10,
+    "total_iterations": 10,
+    "algorithm_metrics": {
+      "DFS": {
+        "algorithm": "DFS",
+        "avg_execution_time_ms": 0.01855119,
+        "avg_cost": 16.25,
+        "success_rate": 0.4,
+        "avg_nodes_explored": 6.5,
+        "avg_iterations": 6.5,
+        "computational_efficiency": 350.3818353431775,
+        "scalability_score": 0.44689230051655154
+      },
+      "BFS": {
+        "algorithm": "BFS",
+        "avg_execution_time_ms": 0.016205810000000005,
+        "avg_cost": 15.25,
+        "success_rate": 0.4,
+        "avg_nodes_explored": 6.1,
+        "avg_iterations": 6.1,
+        "computational_efficiency": 376.408214091119,
+        "scalability_score": 0.41007320503669237
+      },
+      "AStar": {
+        "algorithm": "AStar",
+        "avg_execution_time_ms": 0.019046650000000005,
+        "avg_cost": 3.5,
+        "success_rate": 0.4,
+        "avg_nodes_explored": 0.0,
+        "avg_iterations": 0.0,
+        "computational_efficiency": 0.0,
+        "scalability_score": 0.3658147280944135
+      },
+      "Dijkstra": {
+        "algorithm": "Dijkstra",
+        "avg_execution_time_ms": 0.017686590000000002,
+        "avg_cost": 3.4499999999999993,
+        "success_rate": 0.4,
+        "avg_nodes_explored": 6.1,
+        "avg_iterations": 6.3,
+        "computational_efficiency": 344.89406946166554,
+        "scalability_score": 0.37720143596376204
+      }
+    },
+    "generated_at": "2025-08-22T23:51:59.295376724Z"
+  },
+  "quantum_benefits_analysis": {
+    "total_advantage_score": 0.31661287,
+    "advantage_breakdown": {
+      "PathInterference": {
+        "advantage_type": "PathInterference",
+        "magnitude": 0.9999654,
+        "confidence": 1.0,
+        "classical_baseline": 0.4,
+        "quantum_performance": 2.4999135732650757,
+        "improvement_ratio": 6.249783933162689,
+        "measurement_method": "Path overlap and quality improvement analysis",
+        "timestamp": "2025-08-22T23:51:59.295497997Z"
+      },
+      "NodeEntanglement": {
+        "advantage_type": "NodeEntanglement",
+        "magnitude": 0.18310206,
+        "confidence": 1.0,
+        "classical_baseline": 0.3,
+        "quantum_performance": 0.3295837014913559,
+        "improvement_ratio": 1.0986123383045197,
+        "measurement_method": "Long-range semantic connection analysis",
+        "timestamp": "2025-08-22T23:51:59.295458206Z"
+      },
+      "ReasoningCoherence": {
+        "advantage_type": "ReasoningCoherence",
+        "magnitude": 0.5,
+        "confidence": 0.8,
+        "classical_baseline": 0.6,
+        "quantum_performance": 0.7,
+        "improvement_ratio": 1.1666666666666667,
+        "measurement_method": "Semantic consistency analysis across path",
+        "timestamp": "2025-08-22T23:51:59.295505067Z"
+      },
+      "ParallelComputation": {
+        "advantage_type": "ParallelComputation",
+        "magnitude": 0.5499765,
+        "confidence": 1.0,
+        "classical_baseline": 0.5,
+        "quantum_performance": 0.8799624443054199,
+        "improvement_ratio": 1.7599248886108398,
+        "measurement_method": "Multi-path parallel efficiency analysis",
+        "timestamp": "2025-08-22T23:51:59.295505967Z"
+      },
+      "QuantumTunneling": {
+        "advantage_type": "QuantumTunneling",
+        "magnitude": 0.0,
+        "confidence": 0.0,
+        "classical_baseline": 0.1,
+        "quantum_performance": 0.0,
+        "improvement_ratio": 0.0,
+        "measurement_method": "Non-optimal path creativity analysis",
+        "timestamp": "2025-08-22T23:51:59.295452026Z"
+      },
+      "SuperpositionExploration": {
+        "advantage_type": "SuperpositionExploration",
+        "magnitude": 0.0,
+        "confidence": 0.6,
+        "classical_baseline": 3.0,
+        "quantum_performance": 0.0,
+        "improvement_ratio": 0.0,
+        "measurement_method": "Path diversity and exploration count analysis",
+        "timestamp": "2025-08-22T23:51:59.295450416Z"
+      }
+    },
+    "computational_advantage": {
+      "speedup_factor": 1000.0,
+      "efficiency_gain": 166.66666666666666,
+      "resource_utilization": 0.16666667,
+      "parallelism_benefit": 1.0,
+      "computational_overhead": 0.6
+    },
+    "reasoning_advantage": {
+      "path_quality_improvement": 0.13219809688335585,
+      "reasoning_depth": 0.6,
+      "creative_capability": 0.0,
+      "analytical_accuracy": 0.5,
+      "semantic_coherence": 0.5
+    },
+    "scalability_advantage": {
+      "size_scaling_efficiency": 0.49126548,
+      "complexity_handling": 1.0,
+      "memory_efficiency": 0.7352941,
+      "computational_complexity": 0.8333333,
+      "adaptability_score": 0.49126548
+    },
+    "classical_comparison": {
+      "algorithm_comparison": {},
+      "best_classical_alternative": "Dijkstra",
+      "performance_gap": 0.5499955415725708,
+      "applicability_advantage": 0.8,
+      "robustness_score": 0.75
+    },
+    "quantum_advantage_confidence": 0.73333335,
+    "generated_at": "2025-08-22T23:51:59.295513657Z"
+  },
+  "performance_analysis": {
+    "memory_usage": {
+      "total_allocated_bytes": 0,
+      "peak_memory_bytes": 2097152,
+      "current_memory_bytes": 2097152,
+      "memory_growth_rate": 0.0,
+      "fragmentation_ratio": 0.0,
+      "allocation_count": 0,
+      "deallocation_count": 0,
+      "memory_efficiency_score": 1.0
+    },
+    "computational_efficiency": {
+      "operations_per_second": 3203.623939400249,
+      "memory_operations_per_second": 0.0,
+      "cpu_utilization": 0.7,
+      "io_throughput": 1048576.0,
+      "cache_hit_rate": 0.85,
+      "parallelization_efficiency": 0.6,
+      "computational_density": 0.0,
+      "resource_waste_ratio": 0.15
+    },
+    "memory_breakdown": {
+      "graph_structure_bytes": 16600,
+      "node_embeddings_bytes": 30720,
+      "edge_weights_bytes": 1696,
+      "path_cache_bytes": 2048,
+      "temporary_buffers_bytes": 1048576,
+      "algorithm_stack_bytes": 524288,
+      "system_overhead_bytes": 2097152,
+      "other_bytes": 524288
+    },
+    "operation_profiles": [
+      {
+        "operation_type": "comprehensive_manifold_pathfinding",
+        "execution_time_ns": 61031,
+        "memory_before_bytes": 2097152,
+        "memory_after_bytes": 2097152,
+        "memory_delta_bytes": 0,
+        "cpu_cycles": null,
+        "cache_misses": null,
+        "page_faults": null,
+        "success": true,
+        "error_message": null
+      },
+      {
+        "operation_type": "traditional_comprehensive_traditional_search",
+        "execution_time_ns": 76532,
+        "memory_before_bytes": 2097152,
+        "memory_after_bytes": 2097152,
+        "memory_delta_bytes": 0,
+        "cpu_cycles": null,
+        "cache_misses": null,
+        "page_faults": null,
+        "success": true,
+        "error_message": null
+      },
+      {
+        "operation_type": "traditional_comprehensive_traditional_search",
+        "execution_time_ns": 76532,
+        "memory_before_bytes": 2097152,
+        "memory_after_bytes": 2097152,
+        "memory_delta_bytes": 0,
+        "cpu_cycles": null,
+        "cache_misses": null,
+        "page_faults": null,
+        "success": true,
+        "error_message": null
+      }
+    ],
+    "efficiency_score": 0.95500004,
+    "recommendations": [
+      "Performance is within acceptable parameters - no immediate optimizations needed"
+    ],
+    "generated_at": "2025-08-22T23:51:59.296144550Z"
+  },
+  "scalability_metrics": {
+    "node_count": 30,
+    "edge_count": 106,
+    "average_degree": 7.0666666,
+    "clustering_coefficient": 0.7192118,
+    "path_length_distribution": {
+      "p99": 0.5056376650000001,
+      "p75": 0.3155237875,
+      "p50": 0.108828575,
+      "p95": 0.475934725,
+      "p90": 0.43880605
+    },
+    "memory_scaling_efficiency": 1.0,
+    "computational_scaling_efficiency": 0.7719576,
+    "load_balancing_efficiency": 0.5,
+    "bottleneck_analysis": []
+  },
+  "statistical_significance": {
+    "time_p_value": 1.0,
+    "quality_p_value": 0.8057796038713575,
+    "sample_size": 273,
+    "confidence_level": 0.95
+  },
+  "overall_efficiency_score": 0.53991777,
+  "recommendations": [
+    "Manifold routing shows significant quality improvements - consider using for complex reasoning tasks",
+    "Manifold routing has notable latency overhead - investigate optimization opportunities",
+    "Time differences may not be statistically significant - more testing needed"
+  ],
+  "generated_at": "2025-08-22T23:51:59.296244453Z"
+}

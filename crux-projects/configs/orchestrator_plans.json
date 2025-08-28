@@ -1,0 +1,120 @@
+{
+  "version": "1.0",
+  "meta": {
+    "author": "crux-orchestrator-template",
+    "created": "2025-08-14",
+    "local_only": true,
+    "description": "Plan templates driving micro-agent orchestration: factual, summarization, creative."
+  },
+  "plan_selection": {
+    "rules": [
+      { "if_intent_in": ["request", "question", "fact_check"], "select": "factual_query" },
+      { "if_intent_in": ["summarize", "abstraction"], "select": "summarization_query" },
+      { "if_intent_in": ["explore", "brainstorm", "creative"], "select": "creative_query" },
+      { "fallback": "clarify_request" }
+    ],
+    "clarify_request": {
+      "action": "ask_clarifying_question",
+      "parameters": { "prompt_template": "I need clarification: {missing}" }
+    }
+  },
+  "plans": [
+    {
+      "id": "factual_query",
+      "type": "factual",
+      "description": "Confirm facts with web evidence, compute embeddings, score, and narrate.",
+      "steps": [
+        { "name": "normalize" },
+        { "name": "split_documents" },
+        { "name": "extract_keyphrases" },
+        { "name": "compute_embeddings", "args_from": ["normalized"] },
+        { "name": "manifold" },
+        { "name": "web_search", "args": { "q_source": "normalized" } },
+        { "name": "micro_agent_pool.generate_variants" },
+        { "name": "compute_embeddings", "args_from": ["documents"] },
+        { "name": "narrate", "args": { "mode": "grounded" }, "args_from": ["normalized"] }
+      ],
+      "scoring": {
+        "weights": {
+          "sim_input_evidence": 0.4,
+          "sim_keyphrase_manifold": 0.25,
+          "novelty_inverse": 0.2,
+          "coverage": 0.1,
+          "cluster_divergence_inverse": 0.05
+        },
+        "confidence_thresholds": { "high": 0.85, "medium": 0.6 },
+        "actions_on_confidence": {
+          "high": { "action": "publish", "note": "High confidence; safe to publish." },
+          "medium": { "action": "review", "note": "Medium confidence; ask human reviewer." },
+          "low": { "action": "clarify", "note": "Low confidence; ask user for clarification or run deeper search." }
+        }
+      }
+    },
+    {
+      "id": "summarization_query",
+      "type": "summarization",
+      "description": "Summarize/abstract multiple documents and ensure cross-document consistency.",
+      "steps": [
+        { "name": "normalize" },
+        { "name": "split_documents" },
+        { "name": "extract_keyphrases" },
+        { "name": "compute_embeddings", "args_from": ["documents"] },
+        { "name": "narrate", "args": { "prompt_template": "Summarize the following: {normalized}\nEvidence: {evidence}" } }
+      ],
+      "scoring": {
+        "weights": { "sim_input_evidence": 0.3, "sim_keyphrase_manifold": 0.2, "novelty_inverse": 0.2, "coverage": 0.2, "cluster_divergence_inverse": 0.1 },
+        "confidence_thresholds": { "high": 0.9, "medium": 0.65 },
+        "actions_on_confidence": { "high": { "action": "return" }, "medium": { "action": "review" }, "low": { "action": "clarify" } }
+      }
+    },
+    {
+      "id": "creative_query",
+      "type": "creative",
+      "description": "Generate diverse hypotheses with novelty-aware aggregation and micro-agent voting.",
+      "steps": [
+        { "name": "normalize" },
+        { "name": "micro_agent_pool.generate_variants" },
+        { "name": "compute_embeddings", "args_from": ["hypotheses"] },
+        { "name": "narrate", "args": { "prompt_template": "Brainstorm ideas for: {normalized}\nCandidates: {hypotheses}" } }
+      ],
+      "scoring": {
+        "weights": { "sim_input_evidence": 0.1, "sim_keyphrase_manifold": 0.05, "novelty_inverse": 0.6, "coverage": 0.1, "cluster_divergence_inverse": 0.15 },
+        "confidence_thresholds": { "high": 0.8, "medium": 0.5 },
+        "actions_on_confidence": { "high": { "action": "return" }, "medium": { "action": "expand" }, "low": { "action": "iterate" } }
+      }
+    }
+    ,
+    {
+      "id": "python_debugging_plan",
+      "type": "language_code",
+      "description": "Python debugging: run linters, tests, and suggest fixes.",
+      "steps": [
+        { "name": "normalize" },
+        { "name": "extract_keyphrases" },
+        { "name": "compute_embeddings", "args_from": ["normalized"] },
+        { "name": "web_search", "args": { "q_source": "normalized" } },
+        { "name": "narrate", "args": { "prompt_template": "Analyze Python code and suggest fixes: {normalized}" } }
+      ],
+      "scoring": { "weights": { "sim_input_evidence": 0.4 }, "confidence_thresholds": { "high": 0.8, "medium": 0.6 } }
+    },
+    {
+      "id": "rust_performance_plan",
+      "type": "language_code",
+      "description": "Rust performance tuning: run cargo check/clippy hints and suggest optimizations.",
+      "steps": [
+        { "name": "normalize" },
+        { "name": "compute_embeddings", "args_from": ["normalized"] },
+        { "name": "micro_agent_pool.generate_variants" },
+        { "name": "narrate", "args": { "prompt_template": "Analyze Rust code for performance and ownership issues: {normalized}" } }
+      ],
+      "scoring": { "weights": { "novelty_inverse": 0.2 }, "confidence_thresholds": { "high": 0.85, "medium": 0.6 } }
+    },
+    {
+      "id": "generic_code_plan",
+      "type": "language_code",
+      "description": "Generic code plan for unknown languages: run general analysis and narrate.",
+      "steps": [ { "name": "normalize" }, { "name": "narrate" } ],
+      "scoring": { "weights": {}, "confidence_thresholds": { "high": 0.8, "medium": 0.6 } }
+    }
+  ]
+}

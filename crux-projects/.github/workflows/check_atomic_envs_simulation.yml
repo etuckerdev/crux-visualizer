@@ -1,0 +1,23 @@
+name: Check atomic_envs simulation markers
+
+on:
+  push:
+    paths:
+      - 'crux-core/src/minds/atomic_envs/**'
+  pull_request:
+    paths:
+      - 'crux-core/src/minds/atomic_envs/**'
+
+jobs:
+  check-simulation-markers:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Rust
+        uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+          profile: minimal
+      - name: Run atomic_envs simulation marker check
+        run: |
+          bash scripts/check_atomic_envs_simulation.sh

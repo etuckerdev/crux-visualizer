@@ -1,0 +1,75 @@
+[package]
+name = "crux-visualizer"
+version = "0.1.0"
+edition = "2021"
+authors = ["CRUX Framework"]
+description = "Visualization tools for Crux Manifolds and reasoning processes"
+license = "MIT"
+repository = "https://github.com/crux-framework/crux"
+
+[lib]
+name = "crux_visualizer"
+path = "src/lib.rs"
+
+[dependencies]
+# Core Crux dependencies
+crux-manifold-engine = { path = "../crux-manifold-engine" }
+crux-core = { path = "../crux-core" }
+crux-knowledge-types = { path = "../crux-knowledge-types" }
+
+# Async and runtime
+tokio = { workspace = true, features = ["full"] }
+async-trait = { workspace = true }
+futures = "0.3.30"
+
+# Serialization and data structures
+serde = { workspace = true }
+serde_json = { workspace = true }
+uuid = { workspace = true, features = ["v4", "serde"] }
+chrono = { workspace = true }
+
+# Math and geometry
+nalgebra = "0.33.2"
+num-traits = "0.2"
+
+# Error handling
+thiserror = "1.0.61"
+anyhow = { workspace = true }
+
+# Logging and tracing
+tracing = { workspace = true }
+tracing-subscriber = "0.3.18"
+
+# GPU rendering
+wgpu = "26.0.1"
+egui = { version = "0.29", features = ["persistence"] }
+egui-wgpu = "0.29"
+egui-winit = "0.29"
+
+# GUI framework
+winit = "0.29"
+
+# Optional dependencies for advanced features
+rand = "0.8.5"
+rayon = "1.7"
+
+# Optional: Bevy ECS for advanced scene management
+bevy = { version = "0.14", optional = true }
+
+# Utilities for safe zero-copy casts
+bytemuck = "1.13"
+cgmath = "0.18.0"
+log = "0.4.27"
+clap = "4.5.45"
+
+[features]
+default = ["2d-projection"]
+full = ["2d-projection", "3d-rendering", "bevy-integration"]
+2d-projection = []
+3d-rendering = []
+bevy-integration = ["bevy"]
+
+[dev-dependencies]
+tokio-test = "0.4"
+criterion = { version = "0.5.1", features = ["html_reports"] }
+tempfile = "3.10.1"

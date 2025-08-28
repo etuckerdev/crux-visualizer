@@ -1,0 +1,11 @@
+{
+  "approaches_executed": 64,
+  "clusters_count": 6,
+  "input": "Summarize the safety considerations for autonomous drones.",
+  "note": "Prototype: micro-agent outputs aggregated by simple normalization and frequency",
+  "top_cluster": {
+    "count": 30,
+    "normalized": "summarize the safety considerations for autonomous drones"
+  },
+  "workers": 8
+}

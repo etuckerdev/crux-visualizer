@@ -1,0 +1,12 @@
+session_id,total_latency_ms,core_latency_ms,has_final_answer,has_interpretations,has_synthesis,paradox_detected
+d63a58d1-27fd-4dd4-91a9-189b2557933e,10280,4318,true,true,true,false
+a91ef4c6-1ea0-4278-a541-575961a03697,21046,6284,true,true,true,false
+260a95c3-1a9c-45bb-abb1-09abe7255eaa,28592,6395,true,true,true,false
+9110e2c2-2353-45eb-b957-f01a63ed8dfc,10845,4074,true,true,true,false
+ff285f20-ac45-4527-9177-645c6ee2189d,26446,4113,true,true,true,false
+825d1302-22cd-4da3-a8a4-3d008f086a91,14446,3996,true,true,true,false
+1e462f0e-a3d7-4e40-8be1-a38a0c643788,14418,5061,true,true,true,false
+2581181f-bb34-423e-aaa7-b01828a99333,29167,6577,true,true,true,false
+c5303fbf-d299-401c-b606-6d9621cb4794,14856,5119,true,true,true,false
+89d10c49-0503-441f-a42c-1e88bca333e0,18542,4192,true,true,true,false
+d4afc8fa-2d93-49ae-a1a6-c11b3046d25e,14105,5825,true,true,true,false

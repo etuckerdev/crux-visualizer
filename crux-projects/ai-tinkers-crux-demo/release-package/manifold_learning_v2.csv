@@ -1,0 +1,2 @@
+session_id,total_latency_ms,core_latency_ms,has_final_answer,has_interpretations,has_synthesis,paradox_detected
+a2c3381e-5c11-41c3-a31d-503126e1c8ec,13222,5117,true,true,true,false

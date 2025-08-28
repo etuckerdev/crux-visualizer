@@ -1,0 +1,46 @@
+[workspace]
+resolver = "3"
+members = [
+    "crux-core",
+    "crux-runtime",
+    "crux-macros",
+    "crux-mind-macros",
+    "crux-apis",
+    "crux-code-model",
+    "crux-common-payloads",
+    "crux-events",
+    "crux-gpu-compute",
+    "crux-knowledge-types",
+    "crux-manifold-engine",
+    "crux-visualizer"
+, "ai-tinkers-crux-demo/release-package/chat-demo/manifold-chat-demo"]
+
+default-members = [
+    "crux-core",
+    "crux-runtime",
+    "crux-macros",
+    "crux-mind-macros", 
+    "crux-apis",
+    "crux-code-model"
+]
+
+
+[workspace.dependencies]
+# Native (non-wasm) builds: full tokio runtime
+tokio = { version = "1.47", default-features = false, features = ["macros", "rt-multi-thread", "sync", "time"], optional = false }
+# WASM builds: minimal tokio runtime (no net, no multi-thread)
+# This is only used if a crate uses [target.'cfg(target_arch = "wasm32")'.dependencies] tokio
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+anyhow = "1.0"
+tracing = "0.1.41" # Updated for better performance
+async-trait = "0.1.80"
+uuid = { version = "1.8.0", features = ["v4"] }
+chrono = { version = "0.4", features = ["serde"] }
+reqwest = { version = "0.12.22", default-features = false, features = ["json", "rustls-tls"] } # Added rustls-tls for security
+ndarray = { version = "0.16.1", features = ["serde"] }
+indicatif = { version = "0.17.11", features = ["default"] }
+# Unify these for candle compatibility
+rand = "0.8.5"
+rand_distr = "0.4.3"
+half = "2.2.1"

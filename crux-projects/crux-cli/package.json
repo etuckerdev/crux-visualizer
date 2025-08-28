@@ -1,0 +1,27 @@
+{
+  "name": "crux-cli",
+  "version": "0.1.0",
+  "description": "Lightweight TypeScript CLI wrapper for the crux-core reasoning engine",
+  "type": "module",
+  "bin": {
+    "crux": "dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc -p .",
+    "start": "node dist/cli.js",
+  "dev": "node --loader ts-node/esm src/cli.ts"
+  },
+  "dependencies": {
+  "commander": "^11.0.0",
+    "ink": "^3.0.0",
+    "react": "^18.2.0",
+    "chalk": "^5.0.0",
+    "ora": "^6.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "ts-node": "^10.0.0",
+    "@types/node": "^18.0.0",
+    "@types/react": "^18.0.0"
+  }
+}
