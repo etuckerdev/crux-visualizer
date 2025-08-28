@@ -1,0 +1,51 @@
+[submodule "crux-apis"]
+	path = crux-apis
+	url = https://github.com/etuckerdev/crux-apis.git
+[submodule "crux-assistant"]
+	path = crux-assistant
+	url = https://github.com/etuckerdev/crux-assistant.git
+[submodule "crux-cli"]
+	path = crux-cli
+	url = https://github.com/etuckerdev/crux-cli.git
+[submodule "crux-code-model"]
+	path = crux-code-model
+	url = https://github.com/etuckerdev/crux-code-model.git
+[submodule "crux-common-payloads"]
+	path = crux-common-payloads
+	url = https://github.com/etuckerdev/crux-common-payloads.git
+[submodule "crux-core"]
+	path = crux-core
+	url = https://github.com/etuckerdev/crux-core.git
+[submodule "crux-creations"]
+	path = crux-creations
+	url = https://github.com/etuckerdev/crux-creations.git
+[submodule "crux-events"]
+	path = crux-events
+	url = https://github.com/etuckerdev/crux-events.git
+[submodule "crux-gpu-compute"]
+	path = crux-gpu-compute
+	url = https://github.com/etuckerdev/crux-gpu-compute.git
+[submodule "crux-knowledge-types"]
+	path = crux-knowledge-types
+	url = https://github.com/etuckerdev/crux-knowledge-types.git
+[submodule "crux-macros"]
+	path = crux-macros
+	url = https://github.com/etuckerdev/crux-macros.git
+[submodule "crux-manifold-engine"]
+	path = crux-manifold-engine
+	url = https://github.com/etuckerdev/crux-manifold-engine.git
+[submodule "crux-mind-macros"]
+	path = crux-mind-macros
+	url = https://github.com/etuckerdev/crux-mind-macros.git
+[submodule "crux-mindwiki"]
+	path = crux-mindwiki
+	url = https://github.com/etuckerdev/crux-mindwiki.git
+[submodule "crux-runtime"]
+	path = crux-runtime
+	url = https://github.com/etuckerdev/crux-runtime.git
+[submodule "crux-runtime-data"]
+	path = crux-runtime-data
+	url = https://github.com/etuckerdev/crux-runtime-data.git
+[submodule "crux-visualizer"]
+	path = crux-visualizer
+	url = https://github.com/etuckerdev/crux-visualizer.git
